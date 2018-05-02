@@ -70,6 +70,18 @@ class Song
     newhash
   end
 
+  def self.artist_count
+    newhash = {}
+    @@artists.each do |artists|
+      if newhash.keys.include?(artists)
+        newhash[artists] += 1
+      else
+        newhash[artists] = 1
+      end
+    end
+    newhash
+  end
+
 
 end
 
